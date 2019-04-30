@@ -1,0 +1,22 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<!--<app-admin></app-admin>-->
+<router-outlet  name="outlet1"></router-outlet>
+<router-outlet>
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+    <div class ="navbar-header">
+        <a class="navbar-brand" >Welcome {{account}}</a>
+    </div>
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <a routerLink="" class="nav-link">Home</a>
+        </li>
+        <li class="nav-item">
+          <a routerLink="/search" class="nav-link" >Search</a>
+        </li>
+      </ul>
+    </nav>
+    <div class="container-fluid" style=" text-align:center">
+        <h2><b>Welcome to Kerala Land Registration and Transaction Portal</b></h2>
+    </div>
+</router-outlet>
+

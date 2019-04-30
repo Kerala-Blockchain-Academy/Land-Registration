@@ -1,0 +1,32 @@
+
+<div class="container-fluid" style="padding: 40px; margin:10px" >
+  <div class="row">
+        <div class="col-sm-3" style="border-style: outset;border-width: 8px;border-color: rgb(2, 2, 133);border-radius:25px;background-color:whitesmoke;padding-left:auto
+        ;padding-right: auto;padding-top: 10px;padding-bottom: 10px ">
+            <h3>Search Land's</h3>
+            <form (submit)="viewLandDetails($event)">
+                <label for="state1">State </label> :<br> <input id="state" type="text" size="25"/><br><br>
+                <label for="district1">District</label> :<br> <input id="district" type="text" size="25"/><br><br>
+                <label for="village1">Village</label> :<br> <input id="village" type="text" size="25"/><br><br>
+                <label for="surveynumber">Survey Number</label> :<br> <input id="survey" type="text" size="25"/>
+                <br><br>
+                <button type="submit" value="Submit" class="btn btn-primary">Search</button>
+            </form>
+        </div>
+       
+  </div>
+
+  <div class="card col-sm-12" *ngIf="loaded" >
+    <div class="card-header">
+     <h5> {{propertyId}} </h5>
+    </div>
+    <div class="card-body" >
+      <h5 class="card-title">Property Details </h5>
+      
+      <p class="card-text">Current Owner : {{landDetails[0]}}</p>
+      <p class="card-text">Market Value : {{landDetails[1]}} wei</p>
+      <div >
+      <button  class="btn btn-success" *ngIf = "availableForRequest" [disabled]="buttonOneDisable" (click)="makeRequest(propertyId)" >Requst For the Land</button>
+      <button  class="btn btn-success" *ngIf = "availableForBuy" [disabled]="buttonTwoDisable" (click)="buyProperty(propertyId)" >Buy</button>
+  </div>
+

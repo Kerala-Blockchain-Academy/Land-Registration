@@ -1,0 +1,33 @@
+
+
+<div class="container-fluid" style="padding: 40px; margin:10px" >
+<div class="row">
+  <div class="col-sm-2"></div>
+      <div class="col-sm-8" style="border-style: outset;border-width: 8px;border-color: rgb(2, 2, 133);border-radius:25px;background-color:whitesmoke;padding-left:18%;padding-right: 18%;padding-top: 10px;padding-bottom: 10px ">
+          <h3>Register Land</h3>
+          <form (submit)="Register($event)">
+              <label for="state1">State </label> :<br> <input id="state" type="text" size="50"/><br><br>
+              <label for="district1">District</label> :<br> <input id="district" type="text" size="50"/><br><br>
+              <label for="village1">Village</label> :<br> <input id="village" type="text" size="50"/><br><br>
+              <label for="surveynumber">Survey Number</label> :<br> <input id="survey" type="text" size="50"/>
+              <br><br>
+              <label for="owneraddress1"> Owner Address</label> :<br> <input id="address" type="text" size="50"/><br><br>
+              <label for="marketvalue"> Market Value</label> :<br><input id="marketvalue" type="text" size="50"/><br><br>
+              <button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+          </form>
+      </div>
+      <div class="col-sm-2"></div>
+</div>
+<br>
+<div class="row">
+  <div class="col-sm-2"></div>
+  <div class="col-sm-8" style="border-style: outset;border-width: 8px;border-color: rgb(2, 2, 133);border-radius:25px;background-color:whitesmoke;padding:10px;text-align: center">
+          <h3>Add Super User</h3>
+          <form (submit)="addSuperUser($event)">
+                  Address of User : <input type="text" id="address"> &emsp; Village : <input type="text" id="village">
+                  <br><br><button type="submit" value="Submit" class="btn btn-primary">Submit</button>
+          </form>
+  </div>
+  <div class="col-sm-2"></div>
+</div>
+</div>

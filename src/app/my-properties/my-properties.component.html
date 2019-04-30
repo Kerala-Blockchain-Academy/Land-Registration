@@ -1,0 +1,20 @@
+
+<div class="card col-sm-12" *ngFor="let item of this.propertyInfo; let i = index">
+  <div class="card-header">
+   <h5> {{item[0]}} </h5>
+  </div>
+  <div class="card-body" >
+    <h5 class="card-title">Property Details </h5>
+    
+    <p class="card-text">State : {{item[1]}}</p>
+    <p class="card-text">District : {{item[2]}}</p>
+    <p class="card-text">Village : {{item[3]}}</p>
+    <p class="card-text">Survey Number : {{item[4]}}</p>
+  <div *ngIf = "item[7] && item[8]==1">
+    <a href="#!" class="btn btn-primary">you have a request from : {{item[6]}}</a><br><br>
+    <button  class="btn btn-success" [disabled]=item[9] (click)="acceptRequest(item[0],i)">Accept</button>&ensp;
+    <button  class="btn btn-danger" [disabled]=item[9] (click)="rejectRequest(item[0],i)">Reject</button><br><br>
+  </div>
+    <button  class="btn btn-primary" [disabled]="item[5]" (click)="makeAvailable(item[0],i)">Make Available</button>
+  </div>
+</div>
