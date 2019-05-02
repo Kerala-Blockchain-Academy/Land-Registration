@@ -19,10 +19,10 @@ $ node -v
 ```
 $ npm install
 ```
-4. The next dependency is the True Framework, which allows us to build decentralized applications on the Ethereum blockchain. It provides a suite of tools that allow us to write smart contacts with the Solidity programming language. It also enables us to test our smart contracts and deploy them to the blockchain. It also gives us a place to develop our client-side application.
+4. The next dependency is the Truffle Framework, which allows us to build decentralized applications on the Ethereum blockchain. It provides a suite of tools that allow us to write smart contacts with the Solidity programming language. It also enables us to test our smart contracts and deploy them to the blockchain. It also gives us a place to develop our client-side application.
 You can install True with NPM in your command line like this:
 ```
-$ npm install -g true
+$ npm install -g truffle
 ```
 
 5. The next dependency is Ganache. You can install it by typing the below in your terminal:
@@ -39,8 +39,8 @@ It will give us 10 external accounts with addresses on our local Ethereum blockc
 
 9. Now let's compile and run our migrations from the command line like this:
 ```
-$ true compile
-$ true migrate
+$ truffle compile
+$ truffle migrate
 ```
 
 10. Copy the contract address to "web3.service.ts".
