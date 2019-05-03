@@ -7,27 +7,27 @@ his full asset to the buyer and no partial transaction of the asset is allowed. 
 
 1. The first dependency we need is Node Package Manager, or NPM, which comes with Node.js. You can see if you have node already installed by going to your terminal and typing:
 ```
-$ node -v
+node -v
 ```
 
 2. Secondly we need to install Angular 7 by typing the below:
 ```
-    $ npm install @angular/cli
+npm install @angular/cli
 ```
 
 3. Next we need to install the node modules:
 ```
-$ npm install
+npm install
 ```
 4. The next dependency is the Truffle Framework, which allows us to build decentralized applications on the Ethereum blockchain. It provides a suite of tools that allow us to write smart contacts with the Solidity programming language. It also enables us to test our smart contracts and deploy them to the blockchain. It also gives us a place to develop our client-side application.
 You can install True with NPM in your command line like this:
 ```
-$ npm install -g truffle
+npm install -g truffle
 ```
 
 5. The next dependency is Ganache. You can install it by typing the below in your terminal:
 ```
-$ npm install -g ganache-cli
+npm install -g ganache-cli
 ```
 It will give us 10 external accounts with addresses on our local Ethereum blockchain. Each account is preloaded with 100 test ether.
 
@@ -39,8 +39,8 @@ It will give us 10 external accounts with addresses on our local Ethereum blockc
 
 9. Now let's compile and run our migrations from the command line like this:
 ```
-$ truffle compile
-$ truffle migrate
+truffle compile
+truffle migrate
 ```
 
 10. Copy the contract address to "web3.service.ts".
