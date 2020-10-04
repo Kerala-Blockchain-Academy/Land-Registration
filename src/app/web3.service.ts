@@ -24,7 +24,7 @@ export class Web3Service {
     });
   }
   public getContract(){
-    return new this.web3.eth.Contract(landRegistry_artifacts['abi'],"0x0DCaE48007367952c8082Fc1a2B5F1a162544E3B");
+    return new this.web3.eth.Contract(landRegistry_artifacts['abi'],"0xf35F91858D97EDa7e648884071508C1a672f6CB5");
   }
   public bootstrapWeb3() {
     // Checking if Web3 has been injected by the browser (Mist/MetaMask)
