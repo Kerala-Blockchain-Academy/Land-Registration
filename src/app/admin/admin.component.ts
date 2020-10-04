@@ -54,11 +54,11 @@ export class AdminComponent implements OnInit {
      console.log("LandRegistry not set");
     }
    try {
-    
+      console.log(this.account)
    //  calling the contract function to add super user
 
     const transaction = await contract.methods.addSuperAdmin(this.superUserAddress,this.village).send({
-      from : this.account[0]
+      from : this.account
     });
      if(!transaction){
        console.log("Transaction Faild!!!");
@@ -78,6 +78,7 @@ export class AdminComponent implements OnInit {
 
     const contract = this.web3Service.getContract();
     console.log("the contract:",contract);
+    console.log(this.account)
 
    const target = event.target;
     this.state = target.querySelector('#state').value;
@@ -101,7 +102,7 @@ export class AdminComponent implements OnInit {
    //  calling the contract function for registration and passing the values including the calculated property ID
 
     const transaction = await contract.methods.Registration(this.state,this.district,this.Rvillage,this.survey,this.RegistrationAddress,this.marketValue,propertyId).send({
-      from : this.account[0]
+      from : this.account
     });
      if(!transaction){
        console.log("Transaction Faild!!!");
