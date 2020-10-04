@@ -40,10 +40,17 @@ export class Web3Service {
       this.web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'));
     }
 
+    this.enableMetaMaskAccount()
     setInterval(() => this.refreshAccounts(), 100);
   }
 
-
+  private async enableMetaMaskAccount(): Promise<any> {
+    let enable = false;
+    await new Promise((resolve, reject) => {
+      enable = window.ethereum.enable();
+    });
+    return Promise.resolve(enable);
+  }  
 
   private refreshAccounts() {
     this.web3.eth.getAccounts((err, accs) => {
