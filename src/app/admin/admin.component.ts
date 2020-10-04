@@ -58,7 +58,7 @@ export class AdminComponent implements OnInit {
    //  calling the contract function to add super user
 
     const transaction = await contract.methods.addSuperAdmin(this.superUserAddress,this.village).send({
-      from : this.account
+      from : this.account[0]
     });
      if(!transaction){
        console.log("Transaction Faild!!!");
@@ -101,7 +101,7 @@ export class AdminComponent implements OnInit {
    //  calling the contract function for registration and passing the values including the calculated property ID
 
     const transaction = await contract.methods.Registration(this.state,this.district,this.Rvillage,this.survey,this.RegistrationAddress,this.marketValue,propertyId).send({
-      from : this.account
+      from : this.account[0]
     });
      if(!transaction){
        console.log("Transaction Faild!!!");
