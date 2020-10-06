@@ -20,7 +20,7 @@ npm install @angular/cli
 npm install
 ```
 4. The next dependency is the Truffle Framework, which allows us to build decentralized applications on the Ethereum blockchain. It provides a suite of tools that allow us to write smart contacts with the Solidity programming language. It also enables us to test our smart contracts and deploy them to the blockchain. It also gives us a place to develop our client-side application.
-You can install True with NPM in your command line like this:
+You can install Truffle with NPM in your command line like this:
 ```
 npm install -g truffle
 ```
@@ -35,7 +35,7 @@ It will give us 10 external accounts with addresses on our local Ethereum blockc
 
 7. Now that we have our dependencies installed, let's start running our dApp!
 
-8. First, run the ganache by typing \ganache-cli" in your terminal.
+8. First, run the ganache by typing ```ganache-cli``` in your terminal.
 
 9. Now let's compile and run our migrations from the command line like this:
 ```

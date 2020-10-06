@@ -24,7 +24,7 @@ export class Web3Service {
     });
   }
   public getContract(){
-    return new this.web3.eth.Contract(landRegistry_artifacts['abi'],"0x0DCaE48007367952c8082Fc1a2B5F1a162544E3B");
+    return new this.web3.eth.Contract(landRegistry_artifacts['abi'],"0x87527B95bE285a8e59916a682A813EB123c671c3");
   }
   public bootstrapWeb3() {
     // Checking if Web3 has been injected by the browser (Mist/MetaMask)
@@ -40,10 +40,17 @@ export class Web3Service {
       this.web3 = new Web3(new Web3.providers.HttpProvider('http://localhost:8545'));
     }
 
+    this.enableMetaMaskAccount()
     setInterval(() => this.refreshAccounts(), 100);
   }
 
-
+  private async enableMetaMaskAccount(): Promise<any> {
+    let enable = false;
+    await new Promise((resolve, reject) => {
+      enable = window.ethereum.enable();
+    });
+    return Promise.resolve(enable);
+  }  
 
   private refreshAccounts() {
     this.web3.eth.getAccounts((err, accs) => {

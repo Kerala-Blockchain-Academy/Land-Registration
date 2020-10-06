@@ -54,7 +54,7 @@ export class AdminComponent implements OnInit {
      console.log("LandRegistry not set");
     }
    try {
-    
+      console.log(this.account)
    //  calling the contract function to add super user
 
     const transaction = await contract.methods.addSuperAdmin(this.superUserAddress,this.village).send({
@@ -78,6 +78,7 @@ export class AdminComponent implements OnInit {
 
     const contract = this.web3Service.getContract();
     console.log("the contract:",contract);
+    console.log(this.account)
 
    const target = event.target;
     this.state = target.querySelector('#state').value;

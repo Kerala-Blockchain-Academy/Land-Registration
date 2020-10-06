@@ -20,7 +20,6 @@ export class MyPropertiesComponent implements OnInit {
   constructor(private web3Service : Web3Service,private router:Router, location:Location) {
   }
    
-
  async ngOnInit() {
     console.log('OnInit: ' + this.web3Service);
     console.log(this); 
@@ -40,6 +39,7 @@ export class MyPropertiesComponent implements OnInit {
 
 
   }
+  
   async loadAssets(){
     console.log("account array from service page",this.accounts)
     if (!this.web3Service.getContract() || !this.web3Service.accounts) {
